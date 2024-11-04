@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/Consulta.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <i class="fas fa-user-md medical-icon"></i>
+            <h1>Diabetes AI</h1>
+        </div>
+        <div class="consulta-container">
+            <h2>Formulário para Análise</h2>
+            <br>
+            <!-- Alterar action para funcionar o form -->
+            <!-- Alterar os valores de cada opção para condizerem com os dados do modelo de IA -->
+            <form action="/login/" method="POST"> 
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="HighBP">Pressão Alta</label>
+                        <select id="HighBP" name="HighBP" required>
+                            <option value="">Selecione</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="HighChol">Colesterol Alto</label>
+                        <select id="HighChol" name="HighChol" required>
+                            <option value="">Selecione</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="CholCheck">Checagem de colesterol</label>
+                        <select id="CholCheck" name="CholCheck" required>
+                            <option value="">Selecione</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="BMI">IMC</label>
+                        <input type="text" id="BMI" name="BMI" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="Smoker">Fumante</label>
+                        <select id="Smoker" name="Smoker" required>
+                            <option value="">Selecione</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="Stroke">AVC</label>
+                        <select id="Stroke" name="Stroke" required>
+                            <option value="">Selecione</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="HeartDiseaseorAttack">Doenças Cardíacas</label>
+                        <select id="HeartDiseaseorAttack" name="HeartDiseaseorAttack" required>
+                            <option value="">Selecione</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="PhysActivity">Atividades Físicas (últimos 30 Dias) </label>
+                        <select id="PhysActivity" name="PhysActivity" required>
+                            <option value="">Selecione</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="Fruits">Consome Frutas</label>
+                        <select id="Fruits" name="Fruits" required>
+                            <option value="">Selecione</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="Veggies">Consome Vegetais</label>
+                        <select id="Veggies" name="Veggies" required>
+                            <option value="">Selecione</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="HvyAlcoholConsump">Alto consumo de Álcool</label>
+                        <select id="HvyAlcoholConsump" name="HvyAlcoholConsump" required>
+                            <option value="">Selecione</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="AnyHealthcare">Possui Convênio</label>
+                        <select id="AnyHealthcare" name="AnyHealthcare" required>
+                            <option value="">Selecione</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="NoDocbcCost">Evitou consultas por questões financeiras</label>
+                        <select id="NoDocbcCost" name="NoDocbcCost" required>
+                            <option value="">Selecione</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="GenHlth">Saúde Geral</label>
+                        <select id="GenHlth" name="GenHlth" required>
+                            <option value="">Selecione</option>
+                            <option value="1">Excelente</option>
+                            <option value="2">Muito Boa</option>
+                            <option value="3">Boa</option>
+                            <option value="4">OK</option>
+                            <option value="5">Ruim</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="MentHlth">Saúde Mental</label>
+                        <select id="MentHlth" name="MentHlth" required>
+                            <option value="">Selecione</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="PhysHlth">Saúde Física</label>
+                        <select id="PhysHlth" name="PhysHlth" required>
+                            <option value="">Selecione</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="DiffWalk">Dificuldade de Andar</label>
+                        <select id="DiffWalk" name="DiffWalk" required>
+                            <option value="">Selecione</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="Sex">Gênero</label>
+                        <select id="Sex" name="Sex" required>
+                            <option value="">Selecione</option>
+                            <option value="0">Feminino</option>
+                            <option value="1">Masculino</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="Age">Idade</label>
+                        <select id="Age" name="Age" required>
+                            <option value="">Selecione</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="Education">Escolaridade</label>
+                        <select id="Education" name="Education" required>
+                            <option value="">Selecione</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="Income">Renda</label>
+                        <select id="Income" name="Income" required>
+                            <option value="">Selecione</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+                
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        
+    </div>
+</body>
+</html>
